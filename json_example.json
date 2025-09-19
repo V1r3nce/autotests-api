@@ -1,0 +1,9 @@
+{
+  "user": {
+    "id": "123",
+    "email": "user@example.com",
+    "lastName": "Krasnova",
+    "firstName": "Denis",
+    "middleName": "Kirillovich"
+  }
+}
