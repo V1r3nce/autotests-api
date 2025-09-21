@@ -20,3 +20,10 @@ refresh_response_data = refresh_response.json()
 
 print(f"Login response: {refresh_response_data}")
 print(f"Status code: {refresh_response.status_code}")
+
+info_headers = {'Authorization': f'Bearer {refresh_response_data['token']['accessToken']}'}
+info_response = httpx.get("http://localhost:8000/api/v1/users/me", headers=info_headers)
+info_response_data = info_response.json()
+
+print(f"Login response: {info_response_data}")
+print(f"Status code: {info_response.status_code}")
