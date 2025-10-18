@@ -63,10 +63,8 @@ class CoursesClient(APIClient):
 
 def get_courses_client(user: AuthenticationUserSchema) -> CoursesClient:
     """
-    Метод удаления курса.
+    Функция создаёт экземпляр CoursesClient с уже настроенным HTTP-клиентом.
 
-    :param user:
-    :param course_id: Идентификатор курса.
-    :return: Ответ от сервера в виде объекта httpx.Response
+    :return: Готовый к использованию CoursesClient.
     """
     return CoursesClient(client=get_private_http_client(user))
